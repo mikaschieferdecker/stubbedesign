@@ -408,8 +408,7 @@ h3 { font-size: 1.3rem; font-weight: 700; }
 
   .hero { padding: 100px 0 80px; text-align: center; }
   .hero .eyebrow { display: block; }
-  .hero h1 { max-width: 1200px; margin: 0 auto 20px; }
-  .hero .section-lead { margin: 0 auto 36px; text-align: center; }
+  .hero h1 { max-width: 1200px; margin-bottom: 25px; margin-top: 25px;}
   .hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
   .hero-page { padding: 72px 0 56px; text-align: left; }
   .hero-page h1 { max-width: 1200px; }
