@@ -31,6 +31,20 @@ h1, h2, h3, h4, p { margin: 0; }
   --container-width: 1140px;
 }
 
+.portrait-photo {
+  padding: 0 !important;
+  overflow: hidden;
+  background: none !important;
+  border: none !important;
+}
+
+.portrait-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Sorgt dafür, dass das Bild proportional skaliert und den Raum perfekt füllt */
+  display: block;
+}
+
 .container {
   width: 100%;
   max-width: var(--container-width);
