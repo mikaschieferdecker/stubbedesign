@@ -3,7 +3,7 @@ name: Deploy Website to All-Inkl
 on:
   push:
     branches:
-      - main # ODER master - je nachdem wie dein Haupt-Branch heißt
+      - claude/ecstatic-cerf-lgdjuh
 
 jobs:
   web-deploy:
