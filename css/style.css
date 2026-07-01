@@ -283,7 +283,7 @@ h3 { font-size: 1.3rem; font-weight: 700; }
   display: grid;
   grid-template-columns: 340px 1fr;
   gap: 56px;
-  align-items: start;
+  align-items: center;
 }
 .about-text > * + * { margin-top: 20px; }
 .about-text p { color: var(--color-text-muted); }
