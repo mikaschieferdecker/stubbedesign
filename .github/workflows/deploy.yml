@@ -13,18 +13,23 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v4
 
-    - name: 📂 Sync HTML/CSS straight to All-Inkl
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./ 
-        server-dir: ./
-        # Korrekte All-Inkl Parameter aus dem Log:
-        port: 21
-        security: loose
-        timeout: 60000
-        exclude: |
-          **/.git*
-          **/.git*/**
+    - name: 🚀 Upload via LFTP (All-Inkl kompatibel)
+      env:
+        FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+      run: |
+        # Installiere lftp
+        sudo apt-get update && sudo apt-get install -y lftp
+        
+        # Übertrage die Dateien mit speziellen All-Inkl Einstellungen
+        lftp -e "
+          set ftp:ssl-allow no; 
+          set ftp:passive-mode true;
+          open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_SERVER; 
+          mirror -R --delete --reverse --no-perms \
+            -x '^.git/' \
+            -x '^.github/' \
+            ./ ./; 
+          quit
+        "
