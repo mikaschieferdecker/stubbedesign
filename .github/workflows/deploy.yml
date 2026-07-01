@@ -19,10 +19,12 @@ jobs:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        # Da es reines HTML ist, laden wir das gesamte Hauptverzeichnis hoch
         local-dir: ./ 
         server-dir: ./
-        # Verhindert, dass die GitHub-internen Ordner auf deinen Webspace geladen werden
+        # All-Inkl Kompatibilitäts-Einstellungen gegen ECONNRESET:
+        port: 21
+        force-secure: false # Erzwingt normales FTP, falls FTPS auf dem Port blockiert wird
+        timeout: 60000      # Erhöht das Timeout auf 60 Sekunden
         exclude: |
           **/.git*
           **/.git*/**
