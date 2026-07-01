@@ -177,6 +177,14 @@ h3 { font-size: 1.3rem; font-weight: 700; }
 }
 
 /* ---------- Hero ---------- */
+
+@media (max-width: 768px) {
+  .hero {
+  padding: 0px;
+  text-align: center;
+}
+}
+
 .hero {
   padding: 100px 0 80px;
   text-align: center;
