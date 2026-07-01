@@ -21,10 +21,10 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./ 
         server-dir: ./
-        # All-Inkl Kompatibilitäts-Einstellungen gegen ECONNRESET:
+        # Korrekte All-Inkl Parameter aus dem Log:
         port: 21
-        force-secure: false # Erzwingt normales FTP, falls FTPS auf dem Port blockiert wird
-        timeout: 60000      # Erhöht das Timeout auf 60 Sekunden
+        security: loose
+        timeout: 60000
         exclude: |
           **/.git*
           **/.git*/**
