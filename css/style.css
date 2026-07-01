@@ -47,7 +47,7 @@ h1, h2, h3, h4, p { margin: 0; }
 
 .container {
   width: 100%;
-  max-width: var(--container-width);
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -72,7 +72,7 @@ h3 { font-size: 1.3rem; font-weight: 700; }
 .section-lead {
   color: var(--color-text-muted);
   font-size: 1.1rem;
-  max-width: 640px;
+  max-width: 1200px;
 }
 @media (max-width: 768px) {
   h1 { font-size: 2.2rem; }
@@ -182,7 +182,7 @@ h3 { font-size: 1.3rem; font-weight: 700; }
   text-align: center;
 }
 .hero .eyebrow { display: block; }
-.hero h1 { max-width: 780px; margin: 0 auto 20px; }
+.hero h1 { max-width: 1200px; margin: 0 auto 20px; }
 .hero .section-lead { margin: 0 auto 36px; text-align: center; }
 .hero-actions {
   display: flex;
@@ -194,7 +194,7 @@ h3 { font-size: 1.3rem; font-weight: 700; }
   padding: 72px 0 56px;
   text-align: left;
 }
-.hero-page h1 { max-width: 720px; }
+.hero-page h1 { max-width: 1200px; }
 
 /* ---------- Placeholder images ---------- */
 .img-placeholder {
@@ -309,7 +309,7 @@ h3 { font-size: 1.3rem; font-weight: 700; }
 .testimonial-quote { font-size: 1.05rem; margin-bottom: 20px; }
 .testimonial-author { display: flex; align-items: center; gap: 12px; }
 .author-avatar {
-  width: 44px;
+  : 44px;
   height: 44px;
   border-radius: 50%;
   background: var(--color-accent-soft);
